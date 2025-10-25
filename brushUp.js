@@ -17,3 +17,7 @@ const Addition = function sum(y, x) {
 }
 
 console.log(Addition(10, 7))
+
+// Arrow function
+const Multiplication = (n, m) => n * m;
+console.log(Multiplication(3, 4));
