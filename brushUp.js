@@ -76,3 +76,17 @@ function printFirstTwo([first, second]) {
 }
 
 printFirstTwo(["A", "B", "C"]);
+
+
+// sets
+const nums = new Set([1, 2, 3, 2, 4, 5]);
+nums.delete(5);
+console.log(nums);
+
+// convert set to array
+const arr = [...nums];
+console.log(arr);
+
+// convert array to set
+const newSet = new Set(arr);
+console.log(newSet);
