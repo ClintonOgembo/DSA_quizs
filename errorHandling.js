@@ -8,7 +8,7 @@ try {
     console.log("This always runs!");
 }
 
-// Using Throw
+// Using Throw to create our own error messages
 function divide(a, b) {
     if (b == 0) {
         throw new Error("Cannot be divided by zero");
