@@ -54,3 +54,25 @@ const player = {
     }
 };
 player.showThis();
+
+// Destructuring
+const myArray = [10, 20, 30];
+const [first, second, third] = myArray;
+console.log(first, second, third);
+
+// Object Destructuring
+const palyer = {
+    Name: "Faith",
+    position: "striker",
+    age: 23
+};
+
+const { Name, position, age } = palyer;
+console.log(Name, position, age);
+
+// destructuring in parameters
+function printFirstTwo([first, second]) {
+    console.log(first, second);
+}
+
+printFirstTwo(["A", "B", "C"]);
