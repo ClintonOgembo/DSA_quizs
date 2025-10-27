@@ -11,7 +11,16 @@ class Solution {
      * @return {boolean}
      */
     isAnagram(s, t) {
-        s.split(',').sort((a, b) => a - b);
-        t.split(',').sort((a, b) => a - b);
+        if (s.length !== t.length) return false;
+
+        const sortedS = s.split('').sort().join('');
+        const sortedT = t.split('').sort().join('');
+
+        if (sortedS !== sortedT) return false;
+        return true;
     }
 }
+
+const solu = new Solution();
+console.log(solu.isAnagram("racecar", "carrace"));
+console.log(solu.isAnagram("car", "rat"));
