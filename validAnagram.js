@@ -10,5 +10,8 @@ class Solution {
      * @param {string} t
      * @return {boolean}
      */
-    isAnagram(s, t) { }
+    isAnagram(s, t) {
+        s.split(',').sort((a, b) => a - b);
+        t.split(',').sort((a, b) => a - b);
+    }
 }
