@@ -104,6 +104,22 @@ class LinkedList {
         return temp;
 
     }
+    /// WRITE SHIFT METHOD HERE ///
+    shift() {
+        if (!this.head) return undefined;
+        let temp = this.head;
+        this.head = this.head.next;
+        this.length--;
+
+        if (this.length === 0) {
+            this.head = null;
+            this.tail = null;
+        }
+        temp.next = null;
+        return temp;
+
+    }
+
 
 
 
