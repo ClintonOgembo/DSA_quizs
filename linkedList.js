@@ -82,6 +82,29 @@ class LinkedList {
         this.length++;
     }
 
+    /// WRITE POP METHOD HERE ///
+    pop() {
+        if (this.length === 0) return undefined;
+        let pre = this.head;
+        let temp = this.head;
+
+        while (temp.next) {
+            pre = temp;
+            temp = temp.next;
+        }
+        this.tail = pre;
+        this.tail.next = null;
+
+        this.length--;
+
+        if (this.length === 0) {
+            this.head = null;
+            this.tail = null;
+        }
+        return temp;
+
+    }
+
 
 
     printList() {
