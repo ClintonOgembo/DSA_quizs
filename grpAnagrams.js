@@ -19,7 +19,7 @@ class Solution {
             }
             res[sortedS].push(s);
         }
-        return Object.values(res);
+        return Object.values(res); // takes all the values (arrays) from the object and returns them in one big array.
     }
 }
 
