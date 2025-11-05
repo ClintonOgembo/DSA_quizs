@@ -128,7 +128,17 @@ class LinkedList {
         }
         return temp;
     }
+    /// WRITE SET METHOD HERE ///
+    set(index, value) {
+        if (index < 0 || index >= this.length) return false;
+        let temp = this.get(index)
 
+        if (temp) {
+            temp.value = value;
+            return true;
+        }
+        return false;
+    }
 
 
 
