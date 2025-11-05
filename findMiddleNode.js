@@ -1,0 +1,26 @@
+class Node {
+    constructor(value) {
+        this.value = value;
+        this.next = null;
+    }
+}
+
+class LinkedList {
+    constructor(value) {
+        const newNode = new Node(value);
+        this.head = newNode;
+        this.tail = this.head;
+    }
+    // WRITE THE FINDMIDDLENODE METHOD HERE // 
+    findMiddleNode() {
+        let slow = this.head;
+        let fast = this.head;
+
+        while (fast && fast.next) {
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        return slow;
+
+    }
+}
