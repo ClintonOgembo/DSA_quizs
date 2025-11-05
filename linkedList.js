@@ -154,6 +154,26 @@ class LinkedList {
         this.length++;
         return true;
     }
+    /// WRITE REMOVE METHOD HERE ///
+    remove(index) {
+        if (index < 0 || index >= this.length) return null;
+        if (index === 0) return this.shift();
+        if (index === this.length - 1) return this.pop();
+
+        let temp = this.get(index);
+        let pre = this.get(index - 1);
+
+        pre = temp.next;
+        temp.next = null;
+
+        this.length--;
+
+        if (this.length === 0) {
+            this.head = null;
+            this.tail = null;
+        }
+        return temp;
+    }
 
 
 
