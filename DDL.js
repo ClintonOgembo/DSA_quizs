@@ -125,6 +125,16 @@ class DoublyLinkedList {
         return temp;
     }
 
+    /// WRITE SET METHOD HERE ///
+    set(index, value) {
+        if (!this.head) return undefined;
+        let temp = this.get(index);
+        if (temp) {
+            temp.value = value;
+            return true;
+        }
+        else return false;
+    }
 
 }
 
