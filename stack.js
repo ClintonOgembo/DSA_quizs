@@ -45,6 +45,15 @@ class Stack {
         this.length++;
         return this;
     }
+    /// WRITE POP METHOD HERE ///
+    pop() {
+        if (!this.top) return undefined;
+        let temp = this.top;
+        this.top = temp.next;
+        temp.next = null;
+        this.length--;
+        return temp;
+    }
 
 }
 
