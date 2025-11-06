@@ -135,6 +135,29 @@ class DoublyLinkedList {
         }
         else return false;
     }
+    /// WRITE INSERT METHOD HERE ///
+    insert(index, value) {
+        if (index < 0 || index > this.length) return false;
+        if (index === this.length) {
+            this.push(value);
+            return true;
+        }
+        if (index === 0) {
+            this.unshift(value);
+            return true;
+        }
+
+        const newNode = new Node(value);
+        let temp = this.get(index);
+        newNode.next = temp;
+        newNode.prev = temp.prev;
+        temp.prev = newNode;
+        newNode.prev.next = newNode;
+
+        this.length++;
+        return true;
+
+    }
 
 }
 
