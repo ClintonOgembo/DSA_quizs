@@ -20,7 +20,7 @@ class Solution {
         );
     }
 
-
+    // time and space complexity is O(n)
     isPalindrome(s) {
         let newStr = '';
         for (let c of s) {
@@ -31,4 +31,25 @@ class Solution {
         return newStr === newStr.split('').reverse().join('');
     }
 
+    // Second solu. "Two Pointers"
+    // time complexity O(n) Space complexity O(1)
+    isPalindrome(s) {
+        let l = 0,
+            r = s.length - 1;
+
+        while (l < r) {
+            while (l < r && !this.isAlphaNum(s[l])) {
+                l++;
+            }
+            while (r > l && !this.isAlphaNum(s[r])) {
+                r--;
+            }
+            if (s[l].toLowerCase() !== s[r].toLowerCase()) {
+                return false;
+            }
+            l++;
+            r--;
+        }
+        return true;
+    }
 }
