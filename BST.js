@@ -139,11 +139,3 @@ if (myBST.root === null) {
 // }
 
 
-
-// let myBST = new BST();
-
-// if (myBST.root === null) {
-//     console.log("Root: null");
-// } else {
-//     console.log("Root:", myBST.root.value);
-// }
