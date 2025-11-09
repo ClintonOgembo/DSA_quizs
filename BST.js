@@ -115,26 +115,7 @@ if (myBST.root === null) {
 //             }
 //         }
 //     }
-//     /// WRITE CONTAINS METHOD HERE ///
-//     contains(value) {
-//         if (!this.root) return false;
-//         let temp = this.root;
-//         if (value === temp.value) return true;
-
-//         while (temp) {
-//             if (value < temp.value) {
-//                 if (temp.value === value) return true;
-//                 else temp = temp.left;
-//             }
-//             else {
-//                 if (temp.value === value) return true;
-//                 else temp = temp.right;
-//             }
-//         }
-//         return false;
-
-//     }
-
+//
 
 // }
 
