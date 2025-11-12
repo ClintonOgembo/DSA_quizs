@@ -28,6 +28,18 @@ class HashTable {
         }
         return undefined;
     }
+    keys() {
+        let allkeys = [];
+        for (let i = 0; i < this.dataMap.length; i++) {
+            if (this.dataMap[i]) {
+                for (let j = 0; j < this.dataMap[i].length; j++) {
+                    allkeys.push(this.dataMap[i][j][0]);
+                }
+            }
+        }
+        return allkeys;
+    }
+
 
     printTable() {
         for (let i = 0; i < this.dataMap.length; i++) {
