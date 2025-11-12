@@ -10,6 +10,13 @@ class HashTable {
         }
         return hash;
     }
+    set(key, value) {
+        let index = this._hash(key);
+        if (!this.dataMap[index]) this.dataMap[index] = [];
+
+        this.dataMap[index].push([key, value]);
+        return this;
+    }
 
     printTable() {
         for (let i = 0; i < this.dataMap.length; i++) {
