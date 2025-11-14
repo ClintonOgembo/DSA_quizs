@@ -27,7 +27,7 @@ class Heap {
         }
     }
     remove() {
-        if (!this.#heap) {
+        if (this.#heap === 0) {
             return null
         }
         if (this.#heap.length === 1) {
