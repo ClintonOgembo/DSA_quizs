@@ -5,10 +5,10 @@ class Heap {
     }
 
     #leftChild(index) {
-        return 2 * parentIndex + 1;
+        return 2 * index + 1;
     }
     #rightChild(index) {
-        return 2 * parentIndex + 2;
+        return 2 * index + 2;
     }
     #parent(index) {
         return Math.floor((index - 1) / 2); // floor removes anything after decimal point
@@ -69,6 +69,7 @@ myHeap.insert(99);
 myHeap.insert(72);
 myHeap.insert(61);
 myHeap.insert(58);
+myHeap.insert(75);
 
 console.log(myHeap.getHeap());
 
@@ -76,6 +77,6 @@ myHeap.insert(100);
 
 console.log(myHeap.getHeap());
 
-myHeap.insert(75);
+myHeap.remove();
 
 console.log(myHeap.getHeap());
