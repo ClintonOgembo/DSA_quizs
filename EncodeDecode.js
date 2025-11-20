@@ -4,13 +4,37 @@ class Solution {
      * @returns {string}
      */
     encode(strs) {
-        const newStr = strs.join('')
-        console.log(newStr);
+        let res = '';
+        for (let i of strs) {
+            res += i.length + "#" + i;
+        }
+        return res;
     }
 
     /**
      * @param {string} str
      * @returns {string[]}
      */
-    decode(str) { }
+    decode(str) {
+        let res = [];
+        let i = 0;
+
+        while (i < str.length) {
+            let j = i;
+            while (str[j] !== `#`) {
+                j++;
+            }
+
+            let length = parseInt(str.substring(i, j));
+            let word = str.substring(j + 1, j + 1 + length);
+            res.push(word);
+
+            i = j + 1 + length;
+        }
+        return res;
+    }
 }
+
+
+const solu = new Solution();
+solu.encode(["neet", "code", "love", "you"]);
